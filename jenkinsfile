@@ -3,6 +3,7 @@ node {
         git 'https://github.com/johnyc55/my-app-1'
       }
       stage('Compile-Package') {
-        sh 'mvn package'
+        def mvnHome = tool name: 'mymvn-1', type: 'maven'
+        sh "${mvnHome}/bin/mvn package'
       }
 }
