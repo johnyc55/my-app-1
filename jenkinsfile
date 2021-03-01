@@ -7,6 +7,6 @@ node {
         sh "${mvnHome}/bin/mvn package"
       }
       stage ('Slack notifictcation') {
-      slackSend baseUrl: 'https://hooks.slack.com/services/TEE680S9H/', channel: '# jenkins-notification', color: 'good', message: 'Welcome to Jenkins !!!', teamDomain: 'ION', tokenCredentialId: 'slack-demo'
+      slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '# jenkins-notification', color: 'good', message: 'Welcome to Jenkins !!!', teamDomain: 'ION', tokenCredentialId: 'slacker'
       }
 }
